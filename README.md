@@ -14,7 +14,7 @@ You can play and test the final version of the game directly on Itch.io:
 
 My name is Yael. I am a **Junior Web Developer** who loves video games and decided to take the leap into the indie game development world. This project represents my introduction to **GDScript**, game loops, and game physics, moving beyond web technologies to explore interactive entertainment.
 
-Since I am a solo developer focusing on code and mechanics, I leveraged **AI tools** to help me brainstorm/debug complex scripts and generate the visual assets (sprites and background art). 
+Since I am a solo developer focusing on code and mechanics, I leveraged **AI tools** to help me debug complex scripts and generate the visual assets (sprites and background art). 
 
 ---
 
