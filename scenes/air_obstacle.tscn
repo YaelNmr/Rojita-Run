@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://wt61irakb5bt"]
+
+[ext_resource type="Script" uid="uid://371a6r4fajqb" path="res://scripts/air_obstacle.gd" id="1_o3wyu"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_imhsm"]
+load_path = "res://.godot/imported/knives.png-87cfb2538160fcc5e260ff557763d405.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3wyu"]
+size = Vector2(43, 59)
+
+[node name="AirObstacle" type="Area2D" unique_id=689302544]
+script = ExtResource("1_o3wyu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1800177465]
+scale = Vector2(0.25, 0.25)
+texture = SubResource("CompressedTexture2D_imhsm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=125920387]
+shape = SubResource("RectangleShape2D_o3wyu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

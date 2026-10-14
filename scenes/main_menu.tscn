@@ -1,0 +1,425 @@
+[gd_scene format=3 uid="uid://q5i18exgtgys"]
+
+[ext_resource type="Script" uid="uid://db4wlqo0vm8fu" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://tfht3ekddif1" path="res://assets/sprites/menu_background.png" id="2_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://daw0vjhp1dsv3" path="res://assets/sprites/rojita_menu_deco.png" id="3_8ln24"]
+[ext_resource type="FontFile" uid="uid://j83k3bedgjkn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_rtw2f"]
+[ext_resource type="AudioStream" uid="uid://f641v50d5ltw" path="res://assets/sounds/tap.wav" id="4_rtw2f"]
+[ext_resource type="FontFile" uid="uid://crnx3vq0ghpcd" path="res://assets/fonts/PixelOperator8.ttf" id="5_rtw2f"]
+[ext_resource type="Script" uid="uid://cirx2q6ukw0ne" path="res://scripts/audio_control.gd" id="6_oa1go"]
+[ext_resource type="Script" uid="uid://clrc0ub5kcfm3" path="res://scripts/fullscreen_control.gd" id="7_tbmy8"]
+[ext_resource type="Script" uid="uid://0xr5gh3j8unq" path="res://scripts/sfx_control.gd" id="8_jk1qb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dd4i"]
+bg_color = Color(0.9529412, 0, 0.101960786, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hstxw"]
+bg_color = Color(0.9529412, 0, 0.101960786, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gw5y6"]
+bg_color = Color(0.9529412, 0, 0.101960786, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtw2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jk1qb"]
+bg_color = Color(0.92156863, 0.16078432, 0.19215687, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8egab"]
+bg_color = Color(0.92156863, 0.16078432, 0.19215687, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgwnu"]
+bg_color = Color(0.92156863, 0.16078432, 0.19215687, 0.5568628)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk1qb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flqon"]
+bg_color = Color(0.32941177, 0.5372549, 0.10980392, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.14)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcqid"]
+bg_color = Color(0.32941177, 0.5372549, 0.10980392, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ajci"]
+bg_color = Color(0.32941177, 0.5372549, 0.10980392, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oa1go"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7b55j"]
+bg_color = Color(0.44705883, 0.14509805, 0.11372549, 0.80784315)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pajh"]
+bg_color = Color(0.44705883, 0.14509805, 0.11372549, 1)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0, 0, 0, 0.65882355)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7ex8"]
+bg_color = Color(0.44705883, 0.14509805, 0.11372549, 0.5568628)
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbmy8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8gd2"]
+bg_color = Color(0.08235294, 0.08235294, 0.08235294, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_rtw2f"]
+color = Color(0.75686276, 0.69411767, 0.3647059, 0.9529412)
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_oa1go"]
+color = Color(0.9529412, 0.21960784, 0.2627451, 1)
+thickness = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+bg_color = Color(0.08235294, 0.08235294, 0.08235294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbmy8"]
+bg_color = Color(0.08235294, 0.08235294, 0.08235294, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="MainMenu" type="Control" unique_id=1221384072]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l6cm7")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1786756029]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 961.0
+offset_bottom = 451.0
+texture = ExtResource("2_jk1qb")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=1722630461]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 11.0
+offset_right = 948.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 16
+text = "HI-SCORE: 0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="." unique_id=750657647]
+layout_mode = 1
+offset_top = 40.0
+offset_right = 960.0
+offset_bottom = 140.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 68
+text = "ROJITA RUN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AppleSprite2D" type="Sprite2D" parent="." unique_id=933717063]
+position = Vector2(480, 160)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_8ln24")
+
+[node name="PlayButton" type="Button" parent="." unique_id=458261813]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 220.0
+offset_right = 580.0
+offset_bottom = 270.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dd4i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hstxw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gw5y6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rtw2f")
+text = "PLAY"
+
+[node name="OptionsButton" type="Button" parent="." unique_id=242533598]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 280.0
+offset_right = 580.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_jk1qb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8egab")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lgwnu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jk1qb")
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="." unique_id=1943901491]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 330.0
+offset_right = 580.0
+offset_bottom = 370.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_flqon")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rcqid")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1ajci")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oa1go")
+text = "CREDITS"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1493083076]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 380.0
+offset_right = 580.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_7b55j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5pajh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j7ex8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tbmy8")
+text = "QUIT"
+
+[node name="OptionsPanel" type="Panel" parent="." unique_id=158387481]
+visible = false
+layout_mode = 0
+offset_left = 232.0
+offset_top = 126.0
+offset_right = 732.0
+offset_bottom = 426.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_a8gd2")
+
+[node name="SettingsLabel" type="Label" parent="OptionsPanel" unique_id=2114864061]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 18.0
+offset_right = 354.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 24
+text = "SETTINGS"
+
+[node name="MusicVolumeLabel" type="Label" parent="OptionsPanel" unique_id=588990828]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 79.0
+offset_right = 330.0
+offset_bottom = 102.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 16
+text = "MUSIC VOLUME"
+
+[node name="AudioControl" type="HSlider" parent="OptionsPanel" unique_id=440468517]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 94.0
+offset_right = 349.0
+offset_bottom = 134.0
+theme_override_styles/slider = SubResource("StyleBoxLine_rtw2f")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_oa1go")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_oa1go")
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("6_oa1go")
+
+[node name="FullscreenControl" type="CheckButton" parent="OptionsPanel" unique_id=575137510]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 153.0
+offset_right = 350.0
+offset_bottom = 193.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 16
+text = "FULLSCREEN"
+script = ExtResource("7_tbmy8")
+
+[node name="SFXControl" type="CheckButton" parent="OptionsPanel" unique_id=1434773816]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 204.0
+offset_right = 349.0
+offset_bottom = 244.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 16
+text = "SFX"
+script = ExtResource("8_jk1qb")
+
+[node name="BackButton" type="Button" parent="OptionsPanel" unique_id=100721834]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 259.0
+offset_right = 286.0
+offset_bottom = 283.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 16
+text = "BACK"
+
+[node name="CreditsPanel" type="Panel" parent="." unique_id=1314730830]
+visible = false
+layout_mode = 0
+offset_left = 105.0
+offset_right = 855.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oa1go")
+
+[node name="CreditsLabel" type="Label" parent="CreditsPanel" unique_id=923536644]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 0
+offset_top = 9.0
+offset_right = 750.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
+text = "ROJITA RUN
+
+Game Design & Programming
+Yael Nmr
+
+Art & Character Design
+Original Character Concept & Sketches: Yael Nmr
+Digital Artwork, Backgrounds & Sprites: Created with OpenAI ChatGPT based on original concepts and direction by Yael Nmr, with manual retouching and editing by Yael Nmr
+
+Assets & Resources
+Sound Effects: Brackeys, Asbjørn Thirslund
+Fonts: Jayvee Enaguas (HarvettFox96)
+Music: Abstraction (abstractionmusic.com)
+
+Special Thanks
+• My mother and my two brothers, for their endless support
+• OpenAI ChatGPT, for programming assistance
+• The Godot Engine community
+• Brackeys and Coco Code for their tutorials
+• Everyone who played, tested, or supported the project"
+autowrap_mode = 2
+
+[node name="CloseButton" type="Button" parent="CreditsPanel" unique_id=698940568]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 407.0
+offset_right = 394.0
+offset_bottom = 428.0
+theme_override_fonts/font = ExtResource("5_rtw2f")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbmy8")
+text = "CLOSE"
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="." unique_id=444985414]
+stream = ExtResource("4_rtw2f")
+bus = &"SFX"
+
+[node name="VersionLabel" type="Label" parent="." unique_id=1802026471]
+layout_mode = 0
+offset_left = 934.0
+offset_top = 436.0
+offset_right = 960.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "v1.0"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="." method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="OptionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButton" to="." method="_on_options_button_mouse_exited"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="CreditsButton" to="." method="_on_credits_button_mouse_entered"]
+[connection signal="mouse_exited" from="CreditsButton" to="." method="_on_credits_button_mouse_exited"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="mouse_entered" from="QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="QuitButton" to="." method="_on_quit_button_mouse_exited"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="OptionsPanel/AudioControl" to="OptionsPanel/AudioControl" method="_on_value_changed"]
+[connection signal="toggled" from="OptionsPanel/FullscreenControl" to="OptionsPanel/FullscreenControl" method="_on_toggled"]
+[connection signal="toggled" from="OptionsPanel/SFXControl" to="OptionsPanel/SFXControl" method="_on_toggled"]
+[connection signal="pressed" from="OptionsPanel/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CreditsPanel/CloseButton" to="." method="_on_close_button_pressed"]

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bhl7se0mjulk0"]
+
+[ext_resource type="Script" uid="uid://n22m3had4bgc" path="res://scripts/dynamic_air_obstacle.gd" id="1_tcdyu"]
+[ext_resource type="Texture2D" uid="uid://bw4gjw4ncg7ge" path="res://assets/sprites/knife.png" id="2_tcdyu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcdyu"]
+radius = 1.25
+height = 96.2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6c62e"]
+size = Vector2(40, 40)
+
+[node name="DynamicAirObstacle" type="Area2D" unique_id=2078021565]
+script = ExtResource("1_tcdyu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=352731047]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_tcdyu")
+
+[node name="CollisionShapeCapsule" type="CollisionShape2D" parent="." unique_id=2143793770]
+process_mode = 3
+rotation = 0.7535388
+scale = Vector2(-0.5812018, 0.6474167)
+shape = SubResource("CapsuleShape2D_tcdyu")
+
+[node name="CollisionShapeRectangle" type="CollisionShape2D" parent="." unique_id=1599916374]
+shape = SubResource("RectangleShape2D_6c62e")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

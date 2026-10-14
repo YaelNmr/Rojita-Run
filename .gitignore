@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+.import/
+
+# Excluir ejecutables exportados (si los guardaste en la misma carpeta)
+*.bin
+*.exe
+*.apk
+*.aab
+*.dmg
+*.html
+*.js
+*.wasm
+*.pck
+*.zip
+
+# Archivos de configuración local
+export_presets.cfg
+
+*.uid

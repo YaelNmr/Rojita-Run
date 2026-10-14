@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ch02v1caks6s8"]
+
+[ext_resource type="Script" uid="uid://b71c1gx3usqmy" path="res://scripts/obstacle.gd" id="1_7ukg5"]
+[ext_resource type="Texture2D" uid="uid://yxvd8xnkd8mp" path="res://assets/sprites/apple_red_sliced.png" id="2_drdry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xr6u"]
+size = Vector2(46, 39)
+
+[node name="Obstacle" type="Area2D" unique_id=1639535071]
+script = ExtResource("1_7ukg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2059058878]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_drdry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=258648836]
+shape = SubResource("RectangleShape2D_3xr6u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

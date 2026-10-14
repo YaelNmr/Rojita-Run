@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://b37j3k2kukt2k"]
+
+[ext_resource type="Script" uid="uid://d0kc7fm67oesp" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://d0xwy1hloh1rw" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://dq16rbpp4x20k" path="res://assets/sprites/background.png" id="2_bt5mj"]
+[ext_resource type="Script" uid="uid://b6vrfjd7xifk" path="res://scripts/spawner.gd" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ch02v1caks6s8" path="res://scenes/obstacle.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://xtd625gu6xn5" path="res://scenes/apple_slice.tscn" id="3_iywne"]
+[ext_resource type="Script" uid="uid://c16b334157bgj" path="res://scripts/ground.gd" id="4_gee14"]
+[ext_resource type="Texture2D" uid="uid://j0eqj2hhki3m" path="res://assets/sprites/ground_1.png" id="8_pl11u"]
+[ext_resource type="Texture2D" uid="uid://do3k8s4a1r8an" path="res://assets/sprites/ground_2.png" id="9_pl11u"]
+[ext_resource type="Texture2D" uid="uid://cxa25jd4kl6nh" path="res://assets/sprites/crisper_drawer.png" id="14_sww3w"]
+[ext_resource type="Texture2D" uid="uid://do86dlkdxbb7" path="res://assets/sprites/bowl_2.png" id="15_suyxu"]
+[ext_resource type="Texture2D" uid="uid://bdftalnsr7nn5" path="res://assets/sprites/baking_pan.png" id="16_qnb83"]
+[ext_resource type="PackedScene" uid="uid://wt61irakb5bt" path="res://scenes/air_obstacle.tscn" id="17_rysoc"]
+[ext_resource type="PackedScene" uid="uid://bhl7se0mjulk0" path="res://scenes/dynamic_air_obstacle.tscn" id="17_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://cmlkg0mbuaq30" path="res://assets/sprites/mixer.png" id="18_qnb83"]
+[ext_resource type="Texture2D" uid="uid://dtxncwvacmvwj" path="res://assets/sprites/bowl.png" id="18_suyxu"]
+[ext_resource type="Texture2D" uid="uid://vffsnbqe6lh" path="res://assets/sprites/blender.png" id="18_sww3w"]
+[ext_resource type="Texture2D" uid="uid://br1v03skmccc4" path="res://assets/sprites/jam_ jar.png" id="18_v2yb1"]
+[ext_resource type="Texture2D" uid="uid://bw4gjw4ncg7ge" path="res://assets/sprites/knife.png" id="20_5newe"]
+[ext_resource type="Texture2D" uid="uid://yxvd8xnkd8mp" path="res://assets/sprites/apple_red_sliced.png" id="20_sgl2t"]
+[ext_resource type="Texture2D" uid="uid://b5ig5be0i535r" path="res://assets/sprites/apple_green_sliced.png" id="20_suyxu"]
+[ext_resource type="Texture2D" uid="uid://c7wngyurpb7rj" path="res://assets/sprites/grater.png" id="21_js0lu"]
+[ext_resource type="Texture2D" uid="uid://7shj0643b32d" path="res://assets/sprites/peeler.png" id="22_37s47"]
+[ext_resource type="Texture2D" uid="uid://xo1wbjc6h6ym" path="res://assets/sprites/whisk.png" id="22_bt5mj"]
+[ext_resource type="Texture2D" uid="uid://d3hxtbvrrvu0a" path="res://assets/sprites/spoons.png" id="22_sgl2t"]
+[ext_resource type="Texture2D" uid="uid://iao6sdstvx1e" path="res://assets/sprites/spatulas_set.png" id="23_qouja"]
+[ext_resource type="Texture2D" uid="uid://d1ds54ml6jbi3" path="res://assets/sprites/knives.png" id="23_wljb1"]
+[ext_resource type="FontFile" uid="uid://crnx3vq0ghpcd" path="res://assets/fonts/PixelOperator8.ttf" id="24_e1j6l"]
+[ext_resource type="Texture2D" uid="uid://hbmef4bypnpy" path="res://assets/sprites/rolling_pin.png" id="24_qnb83"]
+[ext_resource type="FontFile" uid="uid://j83k3bedgjkn" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="25_pl11u"]
+[ext_resource type="AudioStream" uid="uid://cl8qnq47j0pi2" path="res://assets/sounds/coin.wav" id="26_bhx41"]
+[ext_resource type="Texture2D" uid="uid://cywkau4gx0vkj" path="res://assets/sprites/spatula.png" id="29_js0lu"]
+[ext_resource type="Script" uid="uid://0igsjk4qdmp" path="res://scripts/tutorial_layer.gd" id="32_wljb1"]
+[ext_resource type="Texture2D" uid="uid://b1geliivxiyhq" path="res://assets/sprites/tutorial_board.png" id="33_v2yb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
+size = Vector2(2000, 40)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_js0lu"]
+texture = ExtResource("33_v2yb1")
+
+[node name="Game" type="Node2D" unique_id=1946975560 groups=["game"]]
+process_mode = 3
+script = ExtResource("1_lbhrr")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1885798971]
+self_modulate = Color(0.7553863, 0.755386, 0.75538605, 1)
+position = Vector2(480, 209.5)
+scale = Vector2(0.625, 0.4345703)
+texture = ExtResource("2_bt5mj")
+
+[node name="Player" parent="." unique_id=1460008938 instance=ExtResource("1_uwrxv")]
+position = Vector2(80, 322)
+slice_scene = ExtResource("3_iywne")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1017918630]
+position = Vector2(480, 225)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1694489942]
+position = Vector2(0, 352)
+script = ExtResource("4_gee14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=23348887]
+position = Vector2(166, 15)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="GroundSprite1" type="Sprite2D" parent="Ground" unique_id=399127531]
+texture_repeat = 2
+scale = Vector2(2, 2)
+texture = ExtResource("8_pl11u")
+centered = false
+
+[node name="GroundSprite2" type="Sprite2D" parent="Ground" unique_id=15897164]
+texture_repeat = 2
+scale = Vector2(2, 2)
+texture = ExtResource("9_pl11u")
+centered = false
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1424182485]
+script = ExtResource("2_lnu2h")
+obstacle_scene = ExtResource("2_yqjtg")
+air_obstacle_scene = ExtResource("17_rysoc")
+dynamic_air_obstacle_scene = ExtResource("17_ssvqc")
+ground_textures = Array[Texture2D]([ExtResource("20_sgl2t"), ExtResource("20_suyxu"), ExtResource("16_qnb83"), ExtResource("18_sww3w"), ExtResource("18_suyxu"), ExtResource("15_suyxu"), ExtResource("14_sww3w"), ExtResource("18_v2yb1"), ExtResource("18_qnb83"), ExtResource("21_js0lu")])
+ground_collision_sizes = Array[Vector2]([Vector2(46, 39), Vector2(46, 39), Vector2(70, 45), Vector2(40, 100), Vector2(65, 45), Vector2(65, 45), Vector2(105, 38), Vector2(42, 48), Vector2(52, 115), Vector2(45, 55)])
+ground_collision_offsets = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+air_textures = Array[Texture2D]([ExtResource("23_wljb1"), ExtResource("22_sgl2t"), ExtResource("23_qouja")])
+air_collision_sizes = Array[Vector2]([Vector2(65, 55), Vector2(55, 55), Vector2(55, 55)])
+air_collision_offsets = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+dynamic_textures = Array[Texture2D]([ExtResource("20_5newe"), ExtResource("22_37s47"), ExtResource("24_qnb83"), ExtResource("22_bt5mj"), ExtResource("29_js0lu")])
+dynamic_collision_radii = Array[float]([10.0, 10.0, 10.0, 10.0, 10.0])
+dynamic_collision_heights = Array[float]([80.0, 80.0, 80.0, 80.0, 80.0])
+dynamic_collision_sizes = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(80, 20), Vector2(0, 0), Vector2(80, 20)])
+dynamic_collision_offsets = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1330244333 groups=["game"]]
+offset_left = 118.0
+offset_top = 15.0
+offset_right = 220.0
+offset_bottom = 38.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_e1j6l")
+theme_override_font_sizes/font_size = 16
+text = "Score: 0"
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=1080906028]
+offset_left = 709.0
+offset_top = 16.0
+offset_right = 759.0
+offset_bottom = 39.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9607843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_e1j6l")
+theme_override_font_sizes/font_size = 16
+text = "HI-0"
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1716004346]
+visible = false
+offset_left = 196.0
+offset_top = 118.0
+offset_right = 748.0
+offset_bottom = 185.0
+theme_override_fonts/font = ExtResource("25_pl11u")
+theme_override_font_sizes/font_size = 64
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartLabel" type="Label" parent="." unique_id=275573688]
+visible = false
+offset_left = 223.0
+offset_top = 208.0
+offset_right = 715.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("25_pl11u")
+theme_override_font_sizes/font_size = 24
+text = "PRESS SPACE TO RESTART
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackLabel" type="Label" parent="." unique_id=704233229]
+visible = false
+offset_left = 75.0
+offset_top = 250.0
+offset_right = 855.0
+offset_bottom = 301.0
+theme_override_fonts/font = ExtResource("25_pl11u")
+theme_override_font_sizes/font_size = 24
+text = "PRESS ESC TO RETURN TO THE MAIN MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseLabel" type="Label" parent="." unique_id=1188618431]
+process_mode = 3
+visible = false
+offset_left = 380.0
+offset_top = 180.0
+offset_right = 506.0
+offset_bottom = 204.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("24_e1j6l")
+theme_override_font_sizes/font_size = 24
+text = "PAUSED"
+
+[node name="HiScoreSound" type="AudioStreamPlayer2D" parent="." unique_id=30620273]
+stream = ExtResource("26_bhx41")
+bus = &"SFX"
+
+[node name="TutorialLayer" type="CanvasLayer" parent="." unique_id=518747113]
+script = ExtResource("32_wljb1")
+
+[node name="TutorialLabel" type="Label" parent="TutorialLayer" unique_id=1096318538]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 721.0
+offset_top = 63.0
+offset_right = 920.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("24_e1j6l")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_js0lu")
+text = "SPACE to JUMP
+ENTER to PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
