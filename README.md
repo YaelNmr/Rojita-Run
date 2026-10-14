@@ -39,3 +39,4 @@ In **Rojita Run**, you control "Rojita", a brave apple who refuses to become des
 ---
 
 *Thank you for checking out my first step into game dev! Feel free to explore the code or reach out if you want to connect.*
+*Yael Nmr*
